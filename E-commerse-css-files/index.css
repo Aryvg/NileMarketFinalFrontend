@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  /* don’t lock body to viewport height – let it grow and scroll on short phones */
+  min-height: 100vh;
+  height: auto;
+  background-image: url('../frontend-images/top-view-desk-with-black-friday-gifts.jpg');
+  /* Update the path and filename as needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #2575fc;
+}
+
+
+.container {
+  width: 360px;
+  background-color: rgb(41, 6, 28);
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  color: white;
+}
+
+.tab.active {
+  border-bottom: 2px solid #2575fc;
+  color: #2575fc;
+  font-weight: bold;
+}
+
+form {
+  display: none;
+}
+
+form.active {
+  display: block;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #2575fc;
+  color: white;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.msg {
+  height: 18px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+/* Spinner for button loading state */
+.btn-spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #fff;
+  border-top: 2px solid #2575fc;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  vertical-align: middle;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width:376px) {
+  .container {
+    width: 320px;
+  }
+}
+
+@media (max-width:376px) {
+  .container {
+    width: 300px;
+  }
+}
